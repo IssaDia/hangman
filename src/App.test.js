@@ -1,9 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import Masked from './Masked';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+// Test qui permet de vérifier que le composant Masked qui affiche le mot caché est bien présent dans App qui joue le rôle de wrapper de composant
+
+
+describe('Test dans App', () => {
+  it ('it renders  <Masked /> component', ()=>{
+    const component = shallow (<Masked />);
+    expect(component).toHaveLength(1);
+  })
+
+  // ici avec en ajoutant d'autres 'it' je peux effectuer d'autres test dans la catégories des tests du composant App
+  }
+);
+
