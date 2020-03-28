@@ -20,7 +20,7 @@ class Button extends React.Component {
 
     render(){     
                
-        return <button onClick={this.refreshPage.bind(this)}>Rejouer</button>;}
+        return <button classname="btn" onClick={this.refreshPage.bind(this)}>Rejouer</button>;}
            
 }
 

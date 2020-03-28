@@ -1,4 +1,8 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.scss';
+
+
 
 //Tableau avec toutes les lettres de l'alphabet qui seront affichées sous forme de boutons dans le render
 let boardLettersArray = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -26,7 +30,7 @@ class Board extends React.Component {
     render(){
         
            const board = this.state.boardLetters.map((letter, index) => {
-               return <button key={index} className = {letter} value={letter} onClick={this.getClickedLetter.bind(this, letter)}>{letter}</button>;})
+               return <button  key={index} className = "pulse" value={letter} onClick={this.getClickedLetter.bind(this, letter)}>{letter}</button>;})
             return (
                 <div className='keyboard'>
                     {board}

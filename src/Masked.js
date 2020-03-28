@@ -52,7 +52,7 @@ class Masked extends React.Component {
           
     } 
 
-    //méthode utilisant un cycle de vie permettant d'afficher un boutton rejouer lorsque le mot a été trouvé
+    //méthode utilisant un cycle de vie permettant d'afficher un boutton 'rejouer' lorsque le mot a été trouvé
 
     componentDidUpdate() {
 
@@ -62,7 +62,7 @@ class Masked extends React.Component {
         if (winningLettersArray.length === phraseArray.length) {
 
             this.setState({ showButton: true});
-            this.setState({ state: this.state });
+            
    
            } 
       
